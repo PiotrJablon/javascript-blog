@@ -7,17 +7,29 @@ const titleClickHandler = function(){
   console.log(event);
 }
 
-  /* remove class 'active' from all article links
+  /* [DONE] remove class 'active' from all article links */
 
-  add class 'active' to the clicked link
+  const activeLinks = document.querySelectorAll('.titles a.active');
 
-  remove class 'active' from all articles
+  for(let activeLink of activeLinks){
+    activeLink.classList.remove('active');
+  }
 
-  get 'href' atribute from the clicked link
+  /* [IN PROGRESS] add class 'active' to the clicked link */
 
-  find the correct article using the selector (value of 'href' atribute)
+  /* [DONE] remove class 'active' from all articles */
 
-  add class 'active' to the correct article */
+  const activeArticles = document.querySelectorAll('.posts article.active');
+
+  for(let activeArticle of activeArticles){
+  	activeArticle.classList.remove('active');
+  }
+
+  /* get 'href' atribute from the clicked link */
+
+  /* find the correct article using the selector (value of 'href' atribute) */
+
+  /* add class 'active' to the correct article */
 
 const links = document.querySelectorAll('.titles a');
 
