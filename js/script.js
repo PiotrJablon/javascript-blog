@@ -58,6 +58,8 @@
 
 	  const articles = document.querySelectorAll(optArticleSelector);
 
+	  let html = '';
+
 	  for(let article of articles){
 
 	    /* get the article id */
@@ -71,12 +73,18 @@
 	    /* get the title from the title element */
 
 	    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-	    console.log(linkHTML);
 
 	    /* create HTML of the link */
 
+		titleList.insertAdjacentHTML('afterbegin', linkHTML);
+
 	    /* insert link into titleList */
+
+	    html = html + linkHTML
+	    console.log(html);
 	  }
+
+	  titleList.innerHTML = html;
 	}
 
 	generateTitleLinks();
