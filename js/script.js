@@ -91,9 +91,9 @@
 
   function generateTags(){
 
-  /* find all articles */
+    /* find all articles */
 
-  const articles = document.querySelectorAll(optArticleSelector);
+    const articles = document.querySelectorAll(optArticleSelector);
 
     /* START LOOP: for every article: */
 
@@ -105,7 +105,7 @@
 
       /* make html variable with empty string */
 
-        let html = '';
+      let html = '';
 
       /* get tags from data-tags attribute */
 
@@ -121,7 +121,7 @@
 
         /* generate HTML of the link */
 
-        const tagHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>'
+        const tagHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li> ';
 
         /* add generated code to html variable */
 
@@ -129,13 +129,13 @@
 
       }
 
-    /* END LOOP: for each tag */
+      /* insert HTML of all the links into the tags wrapper */
 
-    /* insert HTML of all the links into the tags wrapper */
+      articleTag.insertAdjacentHTML('afterbegin', html);
 
-  /* END LOOP: for every article: */
-  }
+    }
   }
 
   generateTags();
+
 }
