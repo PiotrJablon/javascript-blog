@@ -121,7 +121,8 @@
 
         /* generate HTML of the link */
 
-
+        const tagHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>'
+        console.log(tagHTML);
 
         /* add generated code to html variable */
 
