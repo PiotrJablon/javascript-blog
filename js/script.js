@@ -97,7 +97,11 @@
 
     /* START LOOP: for every article: */
 
+    for(let article of articles){
+
       /* find tags wrapper */
+
+      const articleTag = article.querySelector(optArticleTagSelector);
 
       /* make html variable with empty string */
 
