@@ -133,7 +133,6 @@
     for (let tag in allTags){
       /* [NEW] generate code of a link and add it to allTagsHTML */
       allTagsHTML += '<li><a href="#tag-' + tag + '">' + tag + ' (' +  allTags[tag] + ') ' + '</a></li>';
-      console.log(tag)
     /* [NEW] END LOOP: for each tag in allTags: */
     }
     /* [NEW] add html from allTags to tagList */
@@ -187,11 +186,9 @@
     const articles = document.querySelectorAll(optArticleSelector);
     for (let article of articles){
       const articleAuthor = article.querySelector(optArticleAuthorSelector);
-      let html = '';
       const articleAuthors = article.getAttribute('data-author');
       const linkHTML = '<a href="#author-' + articleAuthors + '"><span> by ' + articleAuthors + '</span></a>';
-      html = html + linkHTML;
-      articleAuthor.innerHTML = html;
+      articleAuthor.innerHTML = linkHTML;
     }
   }
 
