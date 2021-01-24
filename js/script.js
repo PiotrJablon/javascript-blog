@@ -208,11 +208,14 @@
     for (let author of authorLinks){
       author.classList.add('active');
     }
-    generateTitleLinks('[data-author="' + tag + '"]');
+    generateTitleLinks('[data-author="' + author + '"]');
   }
 
   function addClickListenersToAuthors(){
-
+    const authorLinks = document.querySelectorAll('a[href^="#author-"]');
+    for (let link of authorLinks){
+      link.addEventListener('click', authorClickHandler);
+    }
   }
 
   addClickListenersToAuthors();
